@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "node", "promise", "oxc"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error"
+  },
+  "rules": {
+    "eqeqeq": "error",
+    "no-debugger": "error",
+    "no-duplicate-imports": "error",
+    "no-unreachable": "error",
+    "no-unsafe-finally": "error",
+    "no-var": "error",
+    "prefer-const": "error"
+  },
+  "options": {
+    "reportUnusedDisableDirectives": "warn"
+  },
+  "env": {
+    "builtin": true,
+    "node": true,
+    "es2024": true
+  },
+  "globals": {},
+  "ignorePatterns": ["dist/**", "node_modules/**", "coverage/**", "*.d.ts"]
+}

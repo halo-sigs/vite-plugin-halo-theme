@@ -1,0 +1,19 @@
+apiVersion: theme.halo.run/v1alpha1
+kind: Theme
+metadata:
+  name: theme-example
+spec:
+  displayName: Example Theme
+  author:
+    name: Halo
+    website: https://www.halo.run
+  description: Example Theme
+  logo: https://www.halo.run/logo
+  homepage:
+  issues: https://github.com/halo-sigs/vite-plugin-halo-theme/issues
+  settingName: "theme-example-setting"
+  configMapName: "theme-example-configMap"
+  version: 1.0.0
+  requires: ">=2.23.0"
+  license:
+    - name: "MIT"

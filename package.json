@@ -1,0 +1,62 @@
+{
+  "name": "@halo-dev/vite-plugin-halo-theme",
+  "version": "1.0.0",
+  "description": "A Vite plugin for Halo theme that provides HTML template pre-compilation and multi-page entry support.",
+  "keywords": [
+    "halo",
+    "halo-theme",
+    "vite"
+  ],
+  "license": "MIT",
+  "author": "@halo-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halo-sigs/vite-plugin-halo-theme.git"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepack": "pnpm build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "fmt": "oxfmt",
+    "lint": "oxlint",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "@halo-dev/api-client": "^2.22.0",
+    "js-yaml": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.12.0",
+    "@typescript/native-preview": "7.0.0-dev.20260311.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.3",
+    "oxfmt": "^0.38.0",
+    "oxlint": "^1.54.0",
+    "tsdown": "^0.21.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "peerDependencies": {
+    "vite": "^7.0.0 || ^8.0.0"
+  },
+  "lint-staged": {
+    "**/*": "oxfmt --no-error-on-unmatched-pattern",
+    "*.{ts}": [
+      "oxlint"
+    ]
+  },
+  "packageManager": "pnpm@10.32.1"
+}

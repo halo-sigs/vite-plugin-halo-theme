@@ -1,0 +1,13 @@
+<include src="layout.html">
+  <template name="head">
+    <title th:text="|${post.spec.title} - ${site.title}|"></title>
+    <script type="module">
+      import { generateToc } from "@/assets/scripts/entry/post.ts";
+      generateToc();
+    </script>
+  </template>
+  <main>
+    <h1 class="text-2xl font-bold" th:text="${post.spec.title}"></h1>
+    <div th:utext="${post.content.content}"></div>
+  </main>
+</include>

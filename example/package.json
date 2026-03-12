@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@halo-dev/vite-plugin-halo-theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "packageManager": "pnpm@10.32.1"
+}
