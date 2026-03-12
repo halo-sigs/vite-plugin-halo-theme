@@ -5,5 +5,5 @@
   "insertFinalNewline": true,
   "sortImports": {},
   "sortPackageJson": true,
-  "ignorePatterns": []
+  "ignorePatterns": ["./example/templates/**"],
 }
