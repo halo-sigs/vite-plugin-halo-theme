@@ -23,5 +23,11 @@
     "es2024": true
   },
   "globals": {},
-  "ignorePatterns": ["dist/**", "node_modules/**", "coverage/**", "*.d.ts"]
+  "ignorePatterns": [
+    "dist/**",
+    "example/templates/**",
+    "node_modules/**",
+    "coverage/**",
+    "*.d.ts"
+  ]
 }

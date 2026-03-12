@@ -7,8 +7,14 @@
     "halo-theme",
     "vite"
   ],
+  "bugs": {
+    "url": "https://github.com/halo-sigs/vite-plugin-halo-theme/issues"
+  },
   "license": "MIT",
-  "author": "@halo-dev",
+  "author": {
+    "name": "Halo",
+    "url": "https://github.com/halo-dev"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/halo-sigs/vite-plugin-halo-theme.git"
