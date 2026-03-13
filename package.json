@@ -30,13 +30,13 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "vp pack",
     "prepack": "pnpm build",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "fmt": "oxfmt",
-    "lint": "oxlint",
-    "prepare": "husky",
+    "test": "vp test run",
+    "test:watch": "vp test",
+    "fmt": "vp fmt",
+    "lint": "vp lint",
+    "prepare": "vp config",
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
@@ -46,23 +46,13 @@
   "devDependencies": {
     "@types/node": "^24.12.0",
     "@typescript/native-preview": "7.0.0-dev.20260311.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.3.3",
-    "oxfmt": "^0.38.0",
-    "oxlint": "^1.54.0",
-    "tsdown": "^0.21.2",
     "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.18"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "vite": "^7.0.0 || ^8.0.0"
-  },
-  "lint-staged": {
-    "**/*": "oxfmt --no-error-on-unmatched-pattern",
-    "*.{ts}": [
-      "oxlint"
-    ]
   },
   "packageManager": "pnpm@10.32.1",
   "compatiblePackages": {

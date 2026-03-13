@@ -1,3 +1,7 @@
 {
-  "recommendations": ["editorconfig.editorconfig", "oxc.oxc-vscode"]
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "oxc.oxc-vscode",
+    "VoidZero.vite-plus-extension-pack"
+  ]
 }

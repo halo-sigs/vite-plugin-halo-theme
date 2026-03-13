@@ -1,7 +1,6 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
-import type { Theme } from "@halo-dev/api-client";
 import type { IndexHtmlTransformContext, Plugin } from "vite";
 import { parse } from "yaml";
 
@@ -87,7 +86,7 @@ function readHaloThemeName(projectRoot: string): string {
   }
 
   const content = readFileSync(themeConfigPath, "utf-8");
-  const parsed = parse(content) as Theme | undefined;
+  const parsed = parse(content);
   const themeName = parsed?.metadata?.name;
 
   if (typeof themeName !== "string" || themeName.trim().length === 0) {
