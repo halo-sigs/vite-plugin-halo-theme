@@ -5,7 +5,8 @@
   "keywords": [
     "halo",
     "halo-theme",
-    "vite"
+    "vite",
+    "vite-plugin"
   ],
   "bugs": {
     "url": "https://github.com/halo-sigs/vite-plugin-halo-theme/issues"
@@ -64,5 +65,16 @@
       "oxlint"
     ]
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.32.1",
+  "compatiblePackages": {
+    "schemaVersion": 1,
+    "rolldown": {
+      "type": "incompatible",
+      "reason": "Uses Vite-specific APIs"
+    },
+    "rollup": {
+      "type": "incompatible",
+      "reason": "Uses Vite-specific APIs"
+    }
+  }
 }
