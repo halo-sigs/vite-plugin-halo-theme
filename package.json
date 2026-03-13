@@ -1,6 +1,6 @@
 {
   "name": "@halo-dev/vite-plugin-halo-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vite plugin for Halo theme that provides HTML template pre-compilation and multi-page entry support.",
   "keywords": [
     "halo",
