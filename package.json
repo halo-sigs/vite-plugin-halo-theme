@@ -31,13 +31,13 @@
   },
   "scripts": {
     "build": "vp pack",
-    "prepack": "pnpm build",
+    "prepack": "vp pack",
     "test": "vp test run",
     "test:watch": "vp test",
     "fmt": "vp fmt",
     "lint": "vp lint",
     "prepare": "vp config",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "vp pack",
     "release": "release-it"
   },
   "dependencies": {
