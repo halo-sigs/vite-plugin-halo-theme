@@ -12,6 +12,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
       - uses: voidzero-dev/setup-vp@v1
         with:
           node-version: "24"
