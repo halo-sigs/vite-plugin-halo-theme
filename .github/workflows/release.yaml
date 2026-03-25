@@ -28,24 +28,17 @@ jobs:
           node-version: "24"
           cache: true
           run-install: false
-
       - name: Install dependencies
         run: vp install
-
-      - name: Lint
-        run: vp check
-
-      - name: Test
-        run: vp test
-
       - name: Build package
         run: vp pack
-
+      - name: Lint
+        run: vp check
+      - name: Test
+        run: vp test
       - name: Verify published contents
         run: npm pack --dry-run
-
       - name: Upgrade npm
         run: npm i -g npm@latest
-
       - name: Publish to NPM
         run: npm publish
