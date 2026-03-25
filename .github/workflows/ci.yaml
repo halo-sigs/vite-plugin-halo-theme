@@ -12,31 +12,13 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: voidzero-dev/setup-vp@v1
         with:
-          node-version: 22
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build
-        run: pnpm build
-
-      - name: Lint
-        run: pnpm lint
-
-      - name: Test
-        run: pnpm test
-
-      - name: Verify package tarball
-        run: pnpm pack
-
+          node-version: "24"
+          cache: true
+      - run: vp install
+      - run: vp check
+      - run: vp test
+      - run: vp pack
       - name: Build example project
-        run: cd example && pnpm install --frozen-lockfile && pnpm build
+        run: cd example && vp build
