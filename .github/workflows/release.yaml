@@ -1,28 +1,51 @@
 name: Release NPM
 
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
 permissions:
-  contents: write
+  contents: read
   id-token: write
 
-on:
-  push:
-    tags:
-      - "*"
+concurrency:
+  group: npm-release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  release:
+  publish:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Vite+
+        uses: voidzero-dev/setup-vp@v1
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          registry-url: https://registry.npmjs.org/
-      - uses: pnpm/action-setup@v4
-      - run: pnpm install
+          node-version: "24"
+          cache: true
+          run-install: false
+
+      - name: Install dependencies
+        run: vp install
+
+      - name: Lint
+        run: vp check
+
+      - name: Test
+        run: vp test
+
+      - name: Build package
+        run: vp pack
+
+      - name: Verify published contents
+        run: npm pack --dry-run
+
       - name: Upgrade npm
         run: npm i -g npm@latest
+
       - name: Publish to NPM
-        run: pnpm publish --no-git-checks
+        run: npm publish
