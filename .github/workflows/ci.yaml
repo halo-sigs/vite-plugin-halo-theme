@@ -19,8 +19,8 @@ jobs:
           node-version: "24"
           cache: true
       - run: vp install
+      - run: vp pack
       - run: vp check
       - run: vp test
-      - run: vp pack
       - name: Build example project
         run: cd example && vp build
