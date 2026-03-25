@@ -52,7 +52,7 @@ These conventions are part of the plugin contract. Do not generalize them into f
 - Entry scanning must skip `src/partials`.
 - Preserve entry mapping:
   - `src/index.html -> index`
-  - `src/a/b.html -> a/b`
+  - `src/a/b.html -> a_b`
   - `src/a/index.html -> a`
 - Keep template compilation AST-based (`parse -> transform -> generate`), do not regress to regex-only templating.
 - On errors, return readable HTML comments (for example `<!-- Partial error: ... -->`) and keep useful logs.

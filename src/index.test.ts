@@ -127,7 +127,7 @@ describe("haloThemePlugin", () => {
       index: normalizePath(path.join(tempDir, "src", "index.html")),
       post: normalizePath(path.join(tempDir, "src", "post.html")),
       shop: normalizePath(path.join(tempDir, "src", "shop", "index.html")),
-      "shop/payments": normalizePath(path.join(tempDir, "src", "shop", "payments.html")),
+      shop_payments: normalizePath(path.join(tempDir, "src", "shop", "payments.html")),
     });
   });
 

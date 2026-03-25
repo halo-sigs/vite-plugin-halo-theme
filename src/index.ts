@@ -202,12 +202,11 @@ function toEntryName(relativeHtmlPath: string): string {
   const normalizedPath = relativeHtmlPath.replace(/\\/g, "/");
   const htmlPathWithoutExtension = normalizedPath.slice(0, -HTML_EXTENSION.length);
 
-  if (!htmlPathWithoutExtension.endsWith("/index")) {
-    return htmlPathWithoutExtension;
-  }
+  const entryName = htmlPathWithoutExtension.endsWith("/index")
+    ? htmlPathWithoutExtension.slice(0, -"/index".length) || "index"
+    : htmlPathWithoutExtension;
 
-  const directoryEntry = htmlPathWithoutExtension.slice(0, -"/index".length);
-  return directoryEntry || "index";
+  return entryName.replace(/\//g, "_");
 }
 
 function logEntryScanError(directory: string, error: unknown): void {
