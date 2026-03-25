@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "dev": "vp build --watch",
     "build": "vp build"
