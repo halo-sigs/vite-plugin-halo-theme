@@ -6,7 +6,7 @@
     "commit": true,
     "commitMessage": "Release v${version}",
     "tag": true,
-    "tagName": "${version}",
+    "tagName": "v${version}",
     "push": true
   },
   "github": {
