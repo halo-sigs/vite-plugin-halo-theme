@@ -27,8 +27,8 @@ pnpm add -D @halo-dev/vite-plugin-halo-theme
 Enable the plugin in `vite.config.ts`:
 
 ```ts
-import { defineConfig } from "vite";
 import { haloThemePlugin } from "@halo-dev/vite-plugin-halo-theme";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [haloThemePlugin()],

@@ -1,0 +1,1 @@
+import"./main-Bv3iyxFt.js";console.log(`Hello from entry/index.ts`);

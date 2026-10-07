@@ -25,8 +25,8 @@ pnpm add -D @halo-dev/vite-plugin-halo-theme
 在 `vite.config.ts` 中启用插件：
 
 ```ts
-import { defineConfig } from "vite";
 import { haloThemePlugin } from "@halo-dev/vite-plugin-halo-theme";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [haloThemePlugin()],
